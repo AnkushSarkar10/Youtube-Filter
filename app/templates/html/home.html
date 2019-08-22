@@ -1,0 +1,55 @@
+{% extends "html/layout.html" %} <!-- html/layout.html because extends looks into templates folder. This is dumb -->
+
+{% block title %}
+Youtube Filter
+{% endblock title %}
+
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/home.css') }}">
+{% endblock custom_css %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container justify-content">
+        <div class="row">
+            <div class="col col-12">
+                <h1 class="display-4 text-center boi_1">Youtube Filter</h1>
+                <footer class="text-muted text-center boi_2`">Most Liked , Most Viewed , Most Disliked</footer>
+                <!-- <small class="text-muted text-center lead">Most liked , Most viewed , Most disliked</small> -->
+            </div>            
+    </div>
+        <br>
+
+        <form method="POST" action="/">
+            {{ form.csrf_token }}
+            <fieldset class = "form-group">
+                <div class="form-group">
+                    <div class="row">
+                            <div class="col col-lg-10 col-md-10 col-sm-12 col-12">
+                                {% if form.name.errors %}
+                                    {{ form.name(class="form-control form-control-lg is-invalid",placeholder = "Enter Channel Name") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                    {{ form.name(class="form-control form-control-lg",placeholder = "Enter Channel Name") }}
+                                {% endif %}
+                            </div>
+                            <div class="col col-lg-2 col-md-2 col-sm-6 col-6 boi_3">             
+                                    {{ form.submit(class="btn mt-1 p-1.5") }}
+                            </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <footer class="text-muted text-center">Wont work for large channels</footer>
+    </div>
+
+{% endblock content %}

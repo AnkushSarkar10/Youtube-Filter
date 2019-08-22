@@ -1,0 +1,19 @@
+{% extends "html/layout.html" %}
+<!-- html/layout.html because extends looks into templates folder. This is dumb -->
+{% block title %}
+{{ name }}
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/stats.css') }}">
+{% endblock custom_css %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-3">About</h1>
+</div>
+<div class="container justify-content">
+    <p>Pretty self explanatory ... <br> You can look up the most liked, most disliked and most viewed video for a youtube channel.</p>
+    <b><mark>Important</mark> - This wont work for channels with a lot of videos(more than 500).</b>
+</div>
+{% endblock content %}

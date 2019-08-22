@@ -1,0 +1,76 @@
+{% extends "html/layout.html" %}
+<!-- html/layout.html because extends looks into templates folder. This is dumb -->
+{% block title %}
+{{ name }}
+{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/stats.css') }}">
+{% endblock custom_css %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-3">{{ name }}</h1>
+</div>
+<div class="container justify-content">
+    <div class="row">
+        <div class="col col-lg-7 col-md-7 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="display-4">Most Viewed Video</h1>
+                </div>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+
+                {{ most_viewed_embeded | safe}}
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+            <div class="nice">
+                <h4>No. of views - <br><span class="badge badge-primary">{{ no_of_views }}</span></h4>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col col-lg-7 col-md-7 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="display-4">Most Liked Video</h1>
+                </div>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                {{ most_liked_embeded | safe}}
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+            <div class="nice">
+                <h4>No. of likes - <br><span class="badge badge-primary">{{ no_of_likes }}</span></h4>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col col-lg-7 col-md-7 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="display-4">Most Disliked Video</h1>
+                </div>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+
+                {{ most_disliked_embeded | safe}}
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+            <div class="nice">
+                <h4>No. of dislikes <br><span class="badge badge-primary">{{ no_of_dislikes }}</span></h4>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,41 @@
+.card-header{
+    background-color: #6b6868;
+}
+iframe{
+    padding-top: 15px;
+}
+.display-4{
+    font-size : 2rem;
+    color: whitesmoke;
+}
+.display-3{
+    font-size : 3.5rem;
+    color: #5e5b5b;
+}
+.card{
+    border:none;
+}
+.jumbotron{
+    background: none;
+}
+.badge{
+    background-color: #6b6868;
+    padding: 9px;
+    margin-top: 7px;
+    align-content: center;
+}
+.nice{
+    margin-top: 100px;
+}
+@media only screen and (max-width: 688px) {
+    .badge{
+        margin-left: 50px;
+    }
+    .nice {
+        margin-left: 60px;
+        margin-top: 15px;
+    }
+    .display-4{
+        font-size : 1.3rem;
+    }
+  }

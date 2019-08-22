@@ -1,0 +1,21 @@
+body{
+    /* background-color: #818D92; */
+    background: linear-gradient(to top, #84817a,#f7f1e3);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* font-family: 'Permanent Marker', cursive; */
+    font-family: 'Lexend Tera', sans-serif !important;
+    /* font-family: 'Nunito', sans-serif !important;
+    font-weight: 700;
+    font-style: italic; */
+}
+
+.navbar{
+    background-color: #4b4b4b !important;
+    /* font-family: 'Permanent Marker', cursive; */
+    font-family: 'Lexend Tera', sans-serif !important;
+    /* font-family: 'Nunito', sans-serif !important; */
+}

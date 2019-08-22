@@ -1,0 +1,36 @@
+{% extends "html/layout.html" %} <!-- html/layout.html because extends looks into templates folder. This is dumb -->
+
+{% block title %}
+Channels
+{% endblock title %}
+
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/channels.css') }}">
+{% endblock custom_css %}
+
+{% block content %}
+    {% set count = namespace(a=1) %}
+    {% for elm in channel_dict %}
+    <div class="container justify-content">
+        <div class="row">
+            <div class="col col-md-12 col-lg-10 col-12">
+                <a href="{{ url_for('stats',channel_id = channel_dict[elm][2]) }}"><!-- /{{ channel_dict[elm][2] }} -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-header text-white bg-danger mb-3">
+                                <h4 class="card-title">{{ count.a }}. {{ channel_dict[elm][0] }}</h1>
+                            </div>
+                            <h6 class="text-right text-muted">Subscribers - </h6>
+                            <h5 id = "boi" class="text-right">{{ channel_dict[elm][1] }}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+        <div class="row"><br></div>
+    </div>
+    {% set count.a = count.a + 1 %}
+    {% endfor %}
+{% endblock content %}
