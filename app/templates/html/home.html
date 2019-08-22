@@ -32,14 +32,14 @@ Youtube Filter
                     <div class="row">
                             <div class="col col-lg-10 col-md-10 col-sm-12 col-12">
                                 {% if form.name.errors %}
-                                    {{ form.name(class="form-control form-control-lg is-invalid",placeholder = "Enter Channel Name") }}
+                                    {{ form.name(class="form-control form-control-lg is-invalid",placeholder = "Enter Channel Name",autocomplete="off") }}
                                 <div class="invalid-feedback">
                                     {% for error in form.name.errors %}
                                         <span>{{ error }}</span>
                                     {% endfor %}
                                 </div>
                                 {% else %}
-                                    {{ form.name(class="form-control form-control-lg",placeholder = "Enter Channel Name") }}
+                                    {{ form.name(class="form-control form-control-lg",placeholder = "Enter Channel Name",autocomplete="off") }}
                                 {% endif %}
                             </div>
                             <div class="col col-lg-2 col-md-2 col-sm-6 col-6 boi_3">             
