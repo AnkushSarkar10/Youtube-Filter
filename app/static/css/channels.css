@@ -31,3 +31,18 @@ a , a:hover{
     letter-spacing: 0.2em;
     color: #222f3e;
 }
+@media only screen and (max-width: 500px){
+    .card {
+        border-radius: 30px !important;
+        padding-bottom: 0px !important;
+    }
+    .card-header{
+        margin-top: -15px !important;
+        margin-right: -16px !important;
+        margin-left: -16px !important;
+        border-radius: 25px !important;
+    }
+    .card:hover {
+        border-radius: 30px !important;
+    }
+}

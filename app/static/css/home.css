@@ -34,5 +34,8 @@
         position:relative;
         left:110px;
     }
-    
+    .form-control{
+        padding-left: 15px;
+        font-size: 1.1em;
+    }
 }
