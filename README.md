@@ -12,3 +12,6 @@ It can be used to look at the most viewed, most liked, and most disliked videos 
 * A [Postgress](https://www.postgresql.org/) database is used.
 
 
+## Deployment
+
+I used [Heroku](https://www.heroku.com/) for hosting the site.
