@@ -14,4 +14,4 @@ It can be used to look at the most viewed, most liked, and most disliked videos 
 
 ## Deployment
 
-I used [Heroku](https://www.heroku.com/) for hosting the site.
+I used [Heroku](https://www.heroku.com/) for hosting this site.
